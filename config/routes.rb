@@ -1,10 +1,29 @@
 Rails.application.routes.draw do
-  resources :user_roles
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  get 'categories/index' => 'categories#index'
+
+  get 'categories/show'
+
+  get 'categories/new'
+
+  post 'categories/new', to:'categories#create'
+
+  get 'categories/edit'
+
+  get 'categories/create'
+
+  get 'categories/update'
+
+  get 'categories/destory'
+
+ 
+  # resources :user_roles
+
+  # # The priority is based upon order of creation: first created -> highest priority.
+  # # See how all your routes lay out with "rake routes".
+
+  # # You can have the root of your site routed with "root"
+  # root 'categories/index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
