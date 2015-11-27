@@ -1,22 +1,38 @@
 Rails.application.routes.draw do
+  
+  get 'posts/index'
 
-  get 'categories/index' => 'categories#index'
+  get 'posts/show'
 
-  get 'categories/show'
+  get 'posts/new'
 
-  get 'categories/new'
+  get 'posts/edit'
 
-  post 'categories/new', to:'categories#create'
+  get 'posts/create'
 
-  get 'categories/edit'
+  get 'posts/update'
 
-  get 'categories/create'
+  get 'posts/destroy'
 
-  get 'categories/update'
+  # get 'categories/index' => 'categories#index'
 
-  get 'categories/destory'
+  # get 'categories/show'
 
+  # get 'categories/new'
+
+  # post 'categories/new', to:'categories#create'
+
+  # get 'categories/edit'
+
+  # get 'categories/create'
+
+  # get 'categories/update'
+
+  # get 'categories/destory'
+  resources :posts
+  resources :categories
  
+  root 'categories#index'
   # resources :user_roles
 
   # # The priority is based upon order of creation: first created -> highest priority.
