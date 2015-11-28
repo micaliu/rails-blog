@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
   
-  get 'posts/index'
+  # get 'posts/index'
 
-  get 'posts/show'
+  # get 'posts/show'
 
-  get 'posts/new'
+  # get 'posts/new'
 
-  get 'posts/edit'
+  # get 'posts/edit'
 
-  get 'posts/create'
+  # get 'posts/create'
 
-  get 'posts/update'
+  # get 'posts/update'
 
-  get 'posts/destroy'
+  # get 'posts/destroy'
 
   # get 'categories/index' => 'categories#index'
 

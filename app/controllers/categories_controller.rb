@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
+
   end
 
   def show
@@ -29,7 +30,6 @@ class CategoriesController < ApplicationController
 
   def update
       @category = Category.find(params[:id])
- 
       if @category.update(category_params)
         redirect_to @category
       else
@@ -37,8 +37,9 @@ class CategoriesController < ApplicationController
       end
   end
 
-  def destory
+  def destroy
       @category = Category.find(params[:id])
+
       @category.destroy
      
       redirect_to categories_path
