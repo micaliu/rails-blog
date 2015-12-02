@@ -1,23 +1,5 @@
-<%= form_for :post, url:posts_path do |f| %>
-  <p>
-    <%= f.label :Category %><br>
-  
-    <%= collection_select(:post, :category_id, Category.all, :id, :name) %>
-  </p>
-  <p>
-    <%= f.label :Title %><br>
-    <%= f.text_field :title %>
-  </p>
-   <p>
-    <%= f.label :Content %><br>
-    <%= f.text_area :content %>
-  </p>
-     <p>
-    <%= f.label :Published %><br>
-    <%= f.check_box:published %>
-  </p>
+<h1>New Post</h1>
  
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
+ 
 <%= link_to 'Back', posts_path %>

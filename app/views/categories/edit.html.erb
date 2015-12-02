@@ -1,14 +1,5 @@
-<%= form_for :category, url: category_path(@category), method: :patch do |f| %>
+<h1>Edit Category</h1>
  
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
- 
-<% end %>
+<%= render 'form' %>
  
 <%= link_to 'Back', categories_path %>

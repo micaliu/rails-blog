@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_filer :authenticate_user!, except: [ :index, :show ]
+  before_action :authenticate_user!, :except => [:show, :index]
   protected
 
   def configure_permitted_parameters

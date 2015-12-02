@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
-
-  devise_for :users
+  devise_for :users, controllers:
+  {
+   sessions: "users/sessions",
+   registrations: "users/registrations",
+   passwords: "users/passwords"
+  }
   # get 'posts/index'
 
   # get 'posts/show'
@@ -35,7 +39,7 @@ Rails.application.routes.draw do
   resources :categories
  
   # root 'categories#index'
-  root to: "user#sign_in"
+  root to: "categories#index"
   # resources :user_roles
 
   # # The priority is based upon order of creation: first created -> highest priority.
