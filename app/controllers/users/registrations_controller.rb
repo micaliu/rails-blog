@@ -9,8 +9,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super
-    UserMailer.registration(User.new(email: 'bo@samurails.com'))
+    super do |resource|
+      UserMailer.registration(resource).deliver_now
+    end
   end
 
   # GET /resource/edit
